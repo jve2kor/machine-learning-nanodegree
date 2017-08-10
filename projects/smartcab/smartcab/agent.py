@@ -39,15 +39,9 @@ class LearningAgent(Agent):
             self.epsilon = 0.0
             self.alpha = 0.0
         else:
-            # commented out testing parameters
-            # self.epsilon = self.epsilon - 0.05
+
             self.t += 1.0
-            # self.epsilon = 1.0/(self.t**2)
-            # self.epsilon = 1.0/(self.t**2 + self.alpha*self.t)
-            # self.epsilon = 1.0/(self.t**2 - self.alpha*self.t)
-            # self.epsilon = math.fabs(math.cos(self.alpha*self.t))
-            # self.epsilon = math.fabs(math.cos(self.alpha*self.t))/(self.t**2)
-            # self.epsilon = 1.0/(self.t**2)
+
             self.epsilon = math.fabs(math.cos(self.alpha*self.t))
 
         return None
