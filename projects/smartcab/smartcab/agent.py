@@ -1,13 +1,4 @@
 #!/usr/bin/python
-"""
-agent.py: version 1.0
-
-DIYJAC
-
-History:
-2017/06/28: Update with signatures as requested by Udacity
-"""
-
 import random
 import math
 from environment import Agent, Environment
@@ -202,14 +193,14 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay=0.01, log_metrics=True, optimized=True)
+    sim = Simulator(env, update_delay=0.01, log_metrics=True, optimized=True,display=False)
     
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=100, tolerance=0.001)
+    sim.run(n_test= 100, tolerance=0.001)
 
 
 if __name__ == '__main__':
